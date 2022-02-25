@@ -1,1 +1,1 @@
-# pbi
+Script para Power BI
