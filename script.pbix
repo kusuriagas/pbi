@@ -1,0 +1,16 @@
+
+
+Calendario= 
+ADDCOLUMNS(
+         CALENDAR(
+                   MIN(Ventas[Fecha]),
+                   MAX(Ventas[Fecha])),
+          "Año", YEAR([Date]),
+          "Numero Mes",MONTH([Date]),
+          "Dia",DAY([Date]),
+          "Periodo", FORMAT([Date],"YYYYMM"),
+          "Mes", FORMAT([Date],"MMMM"),
+          "Dia de la Semana",FORMAT([Date],"dddd"),
+          "Trimestre", "Q" & FORMAT([Date],"Q"),
+          "Semana del Año", WEEKNUM([Date],1)
+          )
